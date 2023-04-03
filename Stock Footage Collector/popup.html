@@ -1,0 +1,85 @@
+<link href="popup.css" rel="stylesheet" type="text/css" />
+
+<script defer type="module" src="popup.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="container">
+  <div class="copy-or-move">
+    <div class="copy-or-move-internal">
+      <img src="./assets/close.png" alt="" class="close-window" />
+      <form name="copy-collections" class="copy-collection-form">
+        Collection name:
+        <select class="copy-collections-select"></select>
+        <div>
+          <button class="copy-vid">Copy to</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <form name="collections" class="collection-form">
+    Collection name:
+    <select class="collections-select"></select>
+    <button class="collections-form-delete">Delete</button>
+  </form>
+  <div class="new-collection-container">
+    <label class="custom-file-upload">
+      <input
+        type="file"
+        id="file"
+        accept=".json"
+        class="custom-file-upload-container"
+      />
+      JSON file
+    </label>
+    <input
+      class="new-collection-input"
+      placeholder="Enter New Collection Name..."
+    />
+    <button class="new-collection">Create</button>
+    <button class="upload-bttn">Upload</button>
+  </div>
+  <div class="filter-collections-container">
+    <form name="filter-collections" class="filter-collections-form">
+      Filter:
+      <select class="filter-select" name="filter">
+        <option value="All">All</option>
+        <option value="Adobe Stock">Adobe Stock</option>
+        <option value="Artgrid">Artgrid</option>
+        <option value="Dissolve">Dissolve</option>
+        <option value="Film Pac">Filmpac</option>
+        <option value="Filmsupply">Filmsupply</option>
+        <option value="Getty">Getty</option>
+        <option value="Motion Array">Motion Array</option>
+        <option value="Nimia">Nimia</option>
+        <option value="Pond5">Pond5</option>
+        <option value="Shutterstock">Shutterstock</option>
+        <option value="Stocksy">Stocksy</option>
+        <option value="iStock">iStock</option>
+      </select>
+    </form>
+  </div>
+  <div class="vid-container"></div>
+  <div class="message"></div>
+  <button id="full-page-bttn">Full Page</button>
+
+  <div class="collection-export">
+    <button class="collection-save-bttn">Save collection as JSON</button>
+    <button class="collection-text-copy-bttn">Copy collection as table</button>
+  </div>
+  <div id="bottom-extend"></div>
+  <div class="multi-select-options">
+    <div class="btn-container">
+      <div class="multi-select-vid-counter-container">
+        <div class="multi-select-vid-counter"></div>
+        <img class="multi-select-vid-unselect-btn" src="assets/unselect.png" />
+      </div>
+      <img class="multi-select-vid-delete-btn" src="assets/delete.png" />
+      <img class="multi-select-vid-copy-btn" src="assets/copy.png" />
+    </div>
+  </div>
+</div>

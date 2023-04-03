@@ -1,0 +1,59 @@
+{
+  "name": "Stock Footage Collector",
+  "version": "0.1.0",
+  "description": "Collect stock footage from various sources and transfer between your team members.",
+  "manifest_version": 3,
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.gettyimages.com/*",
+        "https://*.dissolve.com/*",
+        "https://*.shutterstock.com/*",
+        "https://*.artgrid.io/*",
+        "https://*.pond5.com/*",
+        "https://*.stock.adobe.com/*",
+        "https://*.motionarray.com/*",
+        "https://*.stocksy.com/*",
+        "https://*.filmsupply.com/*",
+        "https://*.filmpac.com/*",
+        "https://*.istockphoto.com/*",
+        "https://*.nimia.com/*"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/bookmark.png",
+        "assets/play.png",
+        "assets/delete.png",
+        "assets/save.png"
+      ],
+      "matches": [
+        "https://*.gettyimages.com/*",
+        "https://*.dissolve.com/*",
+        "https://*.shutterstock.com/*",
+        "https://*.artgrid.io/*",
+        "https://*.pond5.com/*",
+        "https://*.stock.adobe.com/*",
+        "https://*.motionarray.com/*",
+        "https://*.stocksy.com/*",
+        "https://*.filmsupply.com/*",
+        "https://*.filmpac.com/*",
+        "https://*.istockphoto.com/*",
+        "https://*.nimia.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_title": "Stock Footage Collector",
+    "default_popup": "popup.html"
+  }
+}
